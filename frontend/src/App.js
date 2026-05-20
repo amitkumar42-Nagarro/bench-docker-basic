@@ -4,7 +4,7 @@ function App() {
   const [data, setData] = useState({ time: "", tasks: [] });
 
   useEffect(() => {
-    fetch('http://localhost:5000/tasks')
+    fetch('http://localhost:5001/tasks')
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.error(err));

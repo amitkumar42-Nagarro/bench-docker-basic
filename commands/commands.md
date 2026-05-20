@@ -68,3 +68,36 @@ ___
 ___
 ### dcoker images prune  &nbsp;&nbsp;(*dleteing all unused images in one go*)
 ![alt text](image-24.png)
+
+___
+### docker compose build &nbsp;&nbsp;(*Build based on the docker compose file*)
+docker compose up -d --build &nbsp;&nbsp;(*Build and start in detached mode*)
+![alt text](image-25.png)
+
+___
+### docker compose up -d &nbsp;&nbsp;(*Start container in detached mode*) 
+![alt text](image-26.png)
+
+___
+### docker compose exec <service_name_from_dockerFile> sh &nbsp;&nbsp;(*Log into the running service container*) 
+![alt text](image-27.png)
+
+___
+### docker run -d -p 5001:5000 --restart=always --name local-registry registry:2 &nbsp;&nbsp;(*Run official local registry*) 
+![alt text](image-28.png)
+
+___
+### docker tag docker_basics-backend:latest localhost:5001/docker_basic-backend:v0.1 &nbsp;&nbsp;(*Tag existing image for docker registry*) 
+![alt text](image-29.png)
+
+___
+### docker push localhost:5001/docker_basic-backend:v0.1 &nbsp;&nbsp;(*Push existing image to local registry*) 
+![alt text](image-30.png)
+
+___
+### curl http://localhost:5000/v2/_catalog &nbsp;&nbsp;(*Verify if images pushed*) 
+![alt text](image-31.png)\
+
+___
+###  docker run -d -p 5001:5000 localhost:5000/docker_basic-backend:v0.1 &nbsp;&nbsp;(*pull and run image from local*) 
+![alt text](image-32.png)
