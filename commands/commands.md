@@ -72,6 +72,7 @@ ___
 ___
 ### docker compose build &nbsp;&nbsp;(*Build based on the docker compose file*)
 docker compose up -d --build &nbsp;&nbsp;(*Build and start in detached mode*)
+</br>
 ![alt text](image-25.png)
 
 ___
